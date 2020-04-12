@@ -1,0 +1,108 @@
+<div class="container">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col-lg-6 col-md-9  col-sm-12">
+      <ul class="list-group">
+        <li class="list-group-item">
+          <div>
+            <h6 [ngxFitText] [ngxFitTextMax]="50" class="text-center text-uppercase">
+              Total time worked today
+            </h6>
+          </div>
+          <div style="width: 100%;">
+            <h1 [ngxFitText] class="text-center">
+              <ng-container *ngIf="durationWorked$ | async as durationWorked; else emptyTime">{{durationWorked}}</ng-container>
+              <ng-template #emptyTime>00:00:00</ng-template>              
+            </h1>
+          </div>
+        </li>
+
+        <li class="list-group-item">
+          <div>
+            <h6 [ngxFitText] [ngxFitTextMax]="50" class="text-center text-uppercase">
+              Finish work at
+            </h6>
+          </div>
+          <div style="width: 100%;">
+            <h1 [ngxFitText] class="text-center">
+              <ng-container *ngIf="currentFinishTime$ | async as currentFinishTime; else emptyTime">{{currentFinishTime | date: 'HH:mm:ss'}}</ng-container>
+              <ng-template #emptyTime>00:00:00</ng-template>              
+            </h1>
+          </div>
+        </li>
+
+        <li class="list-group-item">
+          <div>
+            <h6 [ngxFitText] [ngxFitTextMax]="50" class="text-center text-uppercase">
+              Time until finish
+            </h6>
+          </div>
+          <div style="width: 100%;">
+            <h1 [ngxFitText] class="text-center">
+              <ng-container *ngIf="durationUntilFinish$ | async as durationUntilFinished; else emptyTime">{{durationUntilFinished}}</ng-container>
+              <ng-template #emptyTime>00:00:00</ng-template>              
+            </h1>
+          </div>
+        </li>
+
+        <li class="list-group-item p-0">
+          <div class="row">
+            <div class="col-12">
+              <div class="btn-group btn-block btn-group-lg" role="group">
+                <button *ngIf="!currentStart" type="button" class="btn btn-primary" (click)="onStartClick()">Start</button>
+                <button *ngIf="currentStart" type="button" class="btn btn-primary" (click)="onStopClick()">Stop</button>
+                <button *ngIf="timeSplitItems.length != 0" type="button" class="btn btn-danger" (click)="onClearClick()">Clear</button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
+
+<!-- 
+<div class="row">
+  <div class="col-4 offset-4">
+    <p>
+      Total time worked today: {{durationWorked$ | async}}
+    </p>
+    <p>
+      Time until finish: {{durationUntilFinished | async}}
+    </p>
+    <p>
+      Finish work at {{currentFinishTime() | date: 'HH:mm:ss'}}
+    </p>
+  </div>
+</div>
+<div class="row" *ngIf="currentStart">
+  <div class="col-4 offset-4">
+    <p>
+      Current work started at {{currentStart.start | date: 'HH:mm:ss'}}
+    </p>
+  </div>
+</div>
+<div class="row" *ngIf="!currentStart">
+  <div class="col-4 offset-4">
+    <button type="button" class="btn btn-primary btn-lg" (click)="onStartClick()">Start</button>
+  </div>
+</div>
+<div class="row" *ngIf="currentStart">
+  <div class="col-4 offset-4">
+    <button type="button" class="btn btn-primary btn-lg" (click)="onStopClick()">Stop</button>
+  </div>
+</div>
+<div class="row">
+  <div class="col-4 offset-4">
+    <ul class="list-group" *ngIf="timeSplitItems.length != 0">
+      <li class="list-group-item" *ngFor="let item of getClosedTimeSlices()">{{item.start | date: 'HH:mm:ss'}} | {{item.end | date: 'HH:mm:ss'}}</li>
+    </ul>
+  </div>
+</div>
+<div class="row" *ngIf="timeSplitItems.length != 0">
+  <div class="col-4 offset-4">
+    <button type="button" class="btn btn-danger btn-lg" (click)="onClearClick()">Clear</button>
+  </div>
+</div>
+ -->
