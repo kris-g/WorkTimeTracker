@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using KrisG.TimeTracker.Entities;
 using KrisG.TimeTracker.Repositories;
-using KrisG.TimeTracker.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KrisG.TimeTracker.Controllers

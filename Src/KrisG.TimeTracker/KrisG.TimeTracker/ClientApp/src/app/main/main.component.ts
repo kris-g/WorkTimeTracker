@@ -26,7 +26,7 @@ export class MainComponent implements OnInit {
   ngOnInit() {
     this.refreshTimeTrackers();
 
-    this.durationUntilFinished = interval(1000).pipe(
+    this.durationUntilFinished = timer(0, 1000).pipe(
       map(() => this.durationUntilFinish())
     );
 
