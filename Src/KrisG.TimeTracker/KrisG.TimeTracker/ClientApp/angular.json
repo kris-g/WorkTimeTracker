@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "KrisG.TimeTracker:build"
+            "buildTarget": "KrisG.TimeTracker:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "KrisG.TimeTracker:build:production"
+              "buildTarget": "KrisG.TimeTracker:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "KrisG.TimeTracker:build"
+            "buildTarget": "KrisG.TimeTracker:build"
           }
         },
         "test": {
