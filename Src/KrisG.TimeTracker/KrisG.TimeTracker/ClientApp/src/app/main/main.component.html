@@ -5,12 +5,12 @@
       <ul class="list-group">
         <li class="list-group-item">
           <div>
-            <h6 [ngxFitText] [ngxFitTextMax]="50" class="text-center text-uppercase">
+            <h6 class="text-center text-uppercase">
               Total time worked today
             </h6>
           </div>
           <div style="width: 100%;">
-            <h1 [ngxFitText] class="text-center">
+            <h1 class="text-center">
               <ng-container *ngIf="durationWorked$ | async as durationWorked; else emptyTime">{{durationWorked}}</ng-container>
               <ng-template #emptyTime>00:00:00</ng-template>              
             </h1>
@@ -19,12 +19,12 @@
 
         <li class="list-group-item">
           <div>
-            <h6 [ngxFitText] [ngxFitTextMax]="50" class="text-center text-uppercase">
+            <h6 class="text-center text-uppercase">
               Time until finish
             </h6>
           </div>
           <div style="width: 100%;">
-            <h1 [ngxFitText] class="text-center">
+            <h1 class="text-center">
               <ng-container *ngIf="durationUntilFinish$ | async as durationUntilFinished; else emptyTime">{{durationUntilFinished}}</ng-container>
               <ng-template #emptyTime>00:00:00</ng-template>              
             </h1>
@@ -33,12 +33,12 @@
 
         <li class="list-group-item">
           <div>
-            <h6 [ngxFitText] [ngxFitTextMax]="50" class="text-center text-uppercase">
+            <h6 class="text-center text-uppercase">
               Finish work at
             </h6>
           </div>
           <div style="width: 100%;">
-            <h1 [ngxFitText] class="text-center">
+            <h1 class="text-center">
               <ng-container *ngIf="currentFinishTime$ | async as currentFinishTime; else emptyTime">{{currentFinishTime | date: 'HH:mm:ss'}}</ng-container>
               <ng-template #emptyTime>00:00:00</ng-template>              
             </h1>
