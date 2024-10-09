@@ -1,0 +1,16 @@
+[
+  {
+    "Username": "test",
+    "PasswordHash": "t7rEINaw9U9GENnSNXp7MHut2nPPMvbwNcKly4BTV6rTVycbIO3KLeRSivVnumJQhTjxrfh6zwcaAhb9k7MDng==",
+    "PasswordSalt": "vpnuAA7vgzOluuohIrFZlVE+LQwfjIOppHqgboD3TTcyJT0nDQrS+vnL41YG72QMvxOB4H12AeN2UvkEjqhV8X+75lvqFEMCYc2+3OrrAFZq5pN3MQYJtMXOZg8DWVsnTxrJ5T8iKcYcXl2uXhiAz2nyosM5s8sak894+0b3e80=",
+    "Token": null,
+    "Id": "cd131f4e07864df4b3ee6eac6c75c358"
+  },
+  {
+    "Username": "kris",
+    "PasswordHash": "bVik5glaipEmOfgIv5JsyEt2qpOw3WpjCJE8NHOvUS6GtwAuIU5+/Op0p6iXWtpuuRTrSY0+MZGQ52h4QREkgg==",
+    "PasswordSalt": "c7cZNz98pUMEWfUSIFiFnvPl56JIkjKHcalga8hVQMiJttFqRse887AWU+XLdIo0xXD8BGA+pOPMqyEcMfRdYBTdS1SjtiTzkLqGYUBD+9jIA0SQ7ZO4WyYDL5ku5v6Hed3vyCWkhEN/X1J6WUrngpH6MTzv1zFdpHwJFsPzKUg=",
+    "Token": null,
+    "Id": "58eb1f08640b44b791da7a97760224ba"
+  }
+]

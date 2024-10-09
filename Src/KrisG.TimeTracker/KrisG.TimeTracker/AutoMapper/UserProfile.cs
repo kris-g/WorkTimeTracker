@@ -9,6 +9,7 @@ namespace KrisG.TimeTracker.AutoMapper
         public UserProfile()
         {
             CreateMap<User, UserModel>();
+            CreateMap<User, AuthenticatedUserModel>();
         }
     }
 }
