@@ -2,7 +2,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { AuthenticationService } from '../core/authentication.service';
 import { Component, OnInit } from '@angular/core';
 import { first } from 'rxjs/operators';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -10,14 +10,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup;
+  loginForm: UntypedFormGroup;
   loading = false;
   submitted = false;
   returnUrl: string;
   error = '';
 
   constructor(
-      private formBuilder: FormBuilder,
+      private formBuilder: UntypedFormBuilder,
       private route: ActivatedRoute,
       private router: Router,
       private authenticationService: AuthenticationService
